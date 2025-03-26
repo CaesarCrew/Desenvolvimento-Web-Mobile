@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Página Básica</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript">
+        function soma(n1,n2){
+            alert(n1 + n2);
+        }
+    </script>
 </head>
 <body>   
     <h1>Bem-vindo à minha página!</h1>
@@ -44,6 +50,64 @@
             <td>Ciências Contábeis</td>
         </tr>
     </table>
+
+    <form action="/cadastro/" method="post">
+        <label for="login">Login</label>
+        <input type="text" name="login" id="login">
+        
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+
+        <label for="numero">Número</label>
+        <input type="number" name="numero" id="numero" max="100" step="10">
+
+        <label for="sexo">Sexo</label>
+        <input type="radio" name="sexo" id="1" checked>Masculino
+        <input type="radio" name="sexo" id="2" checked>Feminino
+
+        <input type="checkbox" name="veiculo1" id="bicicleta">Eu tenho uma bicicleta
+        <input type="checkbox" name="veiculo2" id="carro">Eu tenha um carro
+
+        <label for="curso">Curso</label>
+        <select name="curso">
+            <option value="1">Ciência da computação</option>
+            <option value="2">Medicina</option>
+            <option value="3">Nutrição</option>
+            <option value="4">Enfermagem</option>
+            <option value="5">Engenharia Civil</option>
+            <option value="6">Engenharia Florestal</option>
+            <option value="7">Agroindustria</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" rows="5" cols="30"></textarea>
+
+        <label for="nascimento">Data de nascimento</label>
+        <input type="date" name="data_nasc">
+
+        <label for="auto_completa">Peças de roupa</label>
+        <input list="pecas">
+        <datalist id="pecas">
+            <option>Calça</option>
+            <option>Shorts</option>
+            <option>Saia</option>
+            <option>Blusa</option>
+            <option>Camisa</option>
+            <option>Meia</option>
+            <option>Blazer</option>
+            <option>Sapato</option>
+        </datalist>
+
+        <input type="reset" value="limpar">
+        <input type="submit" value="enviar">
+    
+        <button type="button" onclick="alert ('Alerta')">Alerta</button>
+        <button type="button" onclick="soma(5,10);">Soma</button>
+    </form>
+
+    <div id="area-mensagem">Elementos de bloco</div>
+    <span class="destaque">de</span>
+    <span class="destaque">teste</span>
 
     </body>
 </html>
